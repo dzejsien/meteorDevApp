@@ -1,30 +1,4 @@
 <template name="tmplAppBody">
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="../" class="navbar-brand">Meteor Developmental Application</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li><a href="{{pathFor 'route.myTasks'}}">My Tasks</a></li>
-          <li><a href="{{pathFor 'route.projects'}}">Projects</a></li>
-          <li><a href="{{pathFor 'route.tasks'}}">Tasks</a></li>
-          <li><a href="{{pathFor 'route.users'}}">Users</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li>{{> loginButtons align="right"}}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    {{> Template.dynamic template=content}}
-  </div>
+  {{> Template.dynamic template=header}}
+  {{> Template.dynamic template=content}}
 </template>

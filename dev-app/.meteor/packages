@@ -16,8 +16,6 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-accounts-ui
-accounts-password
 aldeed:collection2
 dburles:collection-helpers
 kadira:flow-router
@@ -26,3 +24,7 @@ less
 kadira:blaze-layout
 arillo:flow-router-helpers
 bootswatch:superhero
+accounts-password
+accounts-ui
+peppelg:bootstrap-3-modal
+msavin:mongol

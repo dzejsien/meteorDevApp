@@ -1,10 +1,18 @@
 Schema = {};
 
 Schema.Tasks = new SimpleSchema({
-  id: { type: String },
-  projectId : { type: String },
-  name: { type: String },
-  createdAt: { type: Date },
+  id: {
+    type: String
+  },
+  projectId: {
+    type: String
+  },
+  name: {
+    type: String
+  },
+  createdAt: {
+    type: Date
+  },
   creator: {
     type: String,
     regEx: SimpleSchema.RegEx.Id
@@ -21,11 +29,17 @@ Schema.Tasks = new SimpleSchema({
 });
 
 Schema.Projects = new SimpleSchema({
-  id: { type: String },
-  name: { type: String },
+  name: {
+    type: String
+  },
+  isActive: {
+    type: Boolean,
+    optional: true
+  },
   creator: {
     type: String,
-    regEx: SimpleSchema.RegEx.Id
+    regEx: SimpleSchema.RegEx.Id,
+    optional: true
   },
   owner: {
     type: String,

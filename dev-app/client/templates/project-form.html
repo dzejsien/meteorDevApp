@@ -1,0 +1,32 @@
+<template name="tmplProjectForm">
+  <form class="form-horizontal">
+    <div class="modal fade">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title">Craete/Edit project</h4>
+          </div>
+
+          <div class="modal-body">
+            <fieldset>
+              <legend>Project's data:</legend>
+              <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                  <input class="form-control" id="inputName" placeholder="Name" type="text" name="name">
+                </div>
+              </div>
+              </fieldset>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveProject">Save</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</template>
