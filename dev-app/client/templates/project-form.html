@@ -1,5 +1,6 @@
 <template name="tmplProjectForm">
-  <form class="form-horizontal">
+
+  <form id="formProject" class="form-horizontal">
     <div class="modal fade">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
@@ -9,12 +10,13 @@
           </div>
 
           <div class="modal-body">
+            {{> tmplError isError=isError errorMessage=errorMessage}}
             <fieldset>
               <legend>Project's data:</legend>
               <div class="form-group">
                 <label for="inputName" class="col-lg-2 control-label">Name</label>
                 <div class="col-lg-10">
-                  <input class="form-control" id="inputName" placeholder="Name" type="text" name="name">
+                  <input class="form-control required" id="inputName" placeholder="Name" type="text" name="name" value="{{project.name}}" />
                 </div>
               </div>
               </fieldset>

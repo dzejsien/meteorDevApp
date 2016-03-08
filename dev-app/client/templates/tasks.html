@@ -4,13 +4,21 @@
       <div class="row">
         <div class="col-lg-8 col-md-7 col-sm-6">
           <h1>Tasks</h1>
-          <p class="lead">Defaine new or edit existing tasks</p>
+          <p class="lead">Define new or edit existing tasks</p>
         </div>
       </div>
       <div class="row">
+        <button id="createTask" class="btn btn-primary" type="button">Create new task</button>
+      </div>
+      <hr />
+      <div class="row">
         <div class="col-md-offset-1 col-md-8">
           <div class="bs-component">
-            {{> tmplListEmpty listName="tasks"}}
+            {{#each task in tasks}}
+              {{> tmplTaskItem task=task showEdit=true}}
+            {{else}}
+              {{> tmplListEmpty listName="tasks"}}
+            {{/each}}
           </div>
         </div>
       </div>

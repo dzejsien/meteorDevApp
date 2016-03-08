@@ -1,4 +1,8 @@
 <template name="tmplAppBody">
   {{> Template.dynamic template=header}}
-  {{> Template.dynamic template=content}}
+  {{#if currentUser}}
+    {{> Template.dynamic template=content}}
+  {{else}}
+    {{> Template.dynamic template=login}}
+  {{/if}}
 </template>

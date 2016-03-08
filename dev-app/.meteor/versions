@@ -7,7 +7,9 @@ aldeed:collection2-core@1.1.0
 aldeed:schema-deny@1.0.1
 aldeed:schema-index@1.0.1
 aldeed:simple-schema@1.5.3
+anti:i18n@0.4.3
 arillo:flow-router-helpers@0.5.1
+aslagle:reactive-table@0.8.28
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -88,6 +90,7 @@ srp@1.0.4
 standard-minifiers@1.0.2
 templating@1.1.5
 templating-tools@1.0.0
+themeteorchef:jquery-validation@1.14.0
 tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4

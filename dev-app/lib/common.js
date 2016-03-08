@@ -1,12 +1,12 @@
 Common = {
 
-    getFormObject:function(form){
-      var obj = {};
+  getFormObject: function(form) {
+    var obj = {};
 
-      $.each($(form).serializeArray(), function(index, item) {
-            obj[item.name] = item.value;
-      });
+    $.each($(form).serializeArray(), function(index, item) {
+      obj[item.name] = item.value;
+    });
 
-      return obj;
-    }
+    return obj;
+  }
 };

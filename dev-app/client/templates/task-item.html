@@ -1,0 +1,45 @@
+<template name="tmplTaskItem">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{task.name}}
+        {{#if task.isDone}}(Done){{/if}}
+      </h3>
+    </div>
+    <div class="panel-body">
+      {{#unless task.isDone}}
+        <div class="row task-operations" data-id="{{task._id}}">
+          <div class="col-md-1">
+            {{#if showEdit}}
+            <a href="#" id="edit">
+              <p>Edit</p>
+            </a>
+            {{/if}}
+
+            {{#if showDone}}
+            <a href="#" id="done">
+              <p>Done</p>
+            </a>
+            {{/if}}
+          </div>
+        </div>
+      {{/unless}}
+      <hr/>
+      <div class="row">
+        <label class="col-md-2 control-label">Project's name:</label>
+        <label class="col-md-10 control-label">{{task.projectName}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-2 control-label">Description:</label>
+        <label class="col-md-10 control-label">{{task.description}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-2 control-label">Owner:</label>
+        <label class="col-md-10 control-label">{{task.username}}</label>
+      </div>
+      <div class="row">
+        <label class="col-md-2 control-label">Created at:</label>
+        <label class="col-md-10 control-label">{{task.createdAt}}</label>
+      </div>
+    </div>
+  </div>
+</template>

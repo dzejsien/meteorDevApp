@@ -1,16 +1,17 @@
-Template.tmplProjects.onCreated(function () {
+Template.tmplProjects.onCreated(function() {
   this.subscribe('projects');
 });
 
 Template.tmplProjects.helpers({
-  projects: function () {
+  projects: function() {
     return Projects.getAll();
   }
 });
 
 Template.tmplProjects.events({
-  "click #createProject": function(e){
-      e.preventDefault();
-      Modal.show('tmplProjectForm');
+  "click #createProject": function(e) {
+    e.preventDefault();
+    Session.set("projectId", null);
+    Modal.show('tmplProjectForm');
   }
 });

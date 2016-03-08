@@ -28,3 +28,6 @@ accounts-password
 accounts-ui
 peppelg:bootstrap-3-modal
 msavin:mongol
+themeteorchef:jquery-validation
+reactive-var
+aslagle:reactive-table

@@ -1,0 +1,68 @@
+<template name="tmplTaskForm">
+
+  <form id="formTask" class="form-horizontal">
+    <div class="modal fade">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title">Craete/Edit task</h4>
+          </div>
+
+          <div class="modal-body">
+            {{> tmplError isError=isError errorMessage=errorMessage}}
+            <fieldset>
+              <legend>Tasks's data:</legend>
+              <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">Name</label>
+                <div class="col-lg-10">
+                  <input class="form-control required" id="inputName" placeholder="Name" type="text" name="name" value="{{task.name}}"/>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="textAreaDescription" class="col-lg-2 control-label">Description</label>
+                <div class="col-lg-10">
+                  <textarea class="form-control required" id="textAreaDescription" rows="3" placeholder="Description" name="description">{{task.description}}</textarea>
+                  <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="selectProjects" class="col-lg-2 control-label">Project</label>
+                <div class="col-lg-10">
+                  <select class="form-control" id="selectProjects" name="projectId">
+                    {{#each project in projectsOptions}}
+                      <option value="{{project._id}}" {{isSelected project._id task.projectId}}>{{project.name}}</option>
+                    {{/each}}
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="selectUsers" class="col-lg-2 control-label">User</label>
+                <div class="col-lg-10">
+                  <select class="form-control" id="selectUsers" name="owner">
+                    {{#each user in userOptions}}
+                      <option value="{{user._id}}" {{isSelected user._id task.owner}}>{{user.username}}</option>
+                    {{/each}}
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="checkboxIsDone" class="col-lg-2 control-label">Is done:</label>
+                <div class="col-lg-10">
+                  <input type="checkbox" {{isDone task.isDone}} name="isDone" />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary" id="saveTask">Save</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</template>
